@@ -16,6 +16,7 @@ values[['AnalysisStartDate']] <- as.Date('05/01/2019', format = c('%m/%d/%Y'))
 values[['Station']] <- "K01-12177-1"
 
 ##import data
+#readme has data locations
 all <- lt_pull_data(finalizedData = FALSE, projectProgramCode = 133, station = values[['Station']], startDate = values[['AnalysisStartDate']])
 PPCPs <- read.xlsx("OCWD 68 water samples PPCPs analysis results 122319_R.xlsx", sheetIndex = 1)
 HF183 <- read.xlsx("HF183 and PMA results.xlsx", sheetIndex = 1)
