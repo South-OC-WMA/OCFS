@@ -1,3 +1,4 @@
+### R script to combine data from various sources for one station until all data can be imported into Labtrack.
 library(LabtrackTools)
 library(plyr)
 library(tidyverse)
