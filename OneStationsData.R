@@ -81,8 +81,7 @@ for (LogNumber in LogNumbers) {
   WaterIsotopeslist[[LogNumber]] <- filter(WaterIsotopes, grepl(LogNumber, WaterIsotopes$Log.number))
 }
 WaterIsotopeslists <- rbindlist(WaterIsotopeslist)
-WaterIsotopesdata <- WaterIsotopeslists %>% 
-  plyr::rename(c("d18O.â.." = "18O", "dD.â.." = "D")) %>%
+WaterIsotopesdata <- WaterIsotopeslists %>%
   select(-Station, -Sampling.date, -Latitude, -Longitude, -Source.Type)%>%
   gather(key = "Parameter", value = "Result", -Log.number)%>%
   mutate(Analysis = "Water Isotopes",
